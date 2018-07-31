@@ -452,7 +452,8 @@ flights_processed2_df.Acft_type.to_csv(path='Aircraft Type.csv', header=True, in
 
 # Read in dataframe of airctraft types with associated Wake Turbulence Category (WTC)
 # WTC information from https://www.skybrary.aero and http://www.aviationfanatic.com
-acft_wtc_df = pd.read_csv('Aircraft Type WTC.csv')
+aircraft_filename_str = input('Enter the filename for aircraft WTC:')
+acft_wtc_df = pd.read_csv(aircraft_filename_str)
 acft_wtc_df.head()
 
 # Create list of WTC (Heavy, Medium, Light, Unknown) for all flights in flights_processed2_df
